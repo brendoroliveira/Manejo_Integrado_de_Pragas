@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIP - Manejo Integrado de Pragas</title>
+    <!-- Vinculação do arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>EcoMIP</h1>
+        <nav>
+            <a href="#sobre">O que é?</a>
+            <a href="#pilares">Pilares</a>
+            <a href="#quiz">Quiz Interativo</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal (Hero) -->
+    <div class="hero">
+        <h2>Manejo Integrado de Pragas (MIP)</h2>
+        <p>Produzindo de forma sustentável, protegendo a lavoura e preservando a biodiversidade.</p>
+    </div>
+
+    <!-- Conteúdo Central -->
+    <div class="container">
+        
+        <!-- Seção: O que é -->
+        <section id="sobre">
+            <h3>O que é o MIP?</h3>
+            <p>O Manejo Integrado de Pragas (MIP) é um sistema de tomada de decisão que associa o uso de diferentes métodos de controle (cultural, biológico, físico e químico). O objetivo principal é manter a população de pragas abaixo do <strong>Nível de Dano Econômico (NDE)</strong>, minimizando os impactos ambientais e reduzindo custos desnecessários.</p>
+        </section>
+
+        <!-- Seção: Pilares do MIP -->
+        <section id="pilares">
+            <h3>Os 4 Pilares Práticos do MIP</h3>
+            <p>Clique em um dos pilares para entender sua aplicação:</p>
+            
+            <div class="pilares-grid">
+                <!-- Atributos data-* são usados para passar as informações para o JavaScript de forma limpa -->
+                <div class="pilar-card" data-titulo="Identificação" data-texto="Identificar corretamente os insetos-praga, inimigos naturais e doenças presentes na área para evitar ações erradas.">
+                    <h4>1. Identificação</h4>
+                </div>
+                <div class="pilar-card" data-titulo="Monitoramento" data-texto="Realizar amostragens periódicas na lavoura para contar a população de pragas antes de tomar qualquer decisão.">
+                    <h4>2. Monitoramento</h4>
+                </div>
+                <div class="pilar-card" data-titulo="Tomada de Decisão" data-texto="Definir se é necessário intervir com base nos níveis de controle econômico estabelecidos pela pesquisa.">
+                    <h4>3. Tomada de Decisão</h4>
+                </div>
+                <div class="pilar-card" data-titulo="Escolha de Métodos" data-texto="Priorizar o controle biológico e cultural. Deixar o defensivo químico como último recurso, escolhendo produtos seletivos.">
+                    <h4>4. Integração de Métodos</h4>
+                </div>
+            </div>
+            
+            <!-- Painel que começa escondido e será exibido via JavaScript -->
+            <div id="pilar-detalhe">
+                <strong id="detalhe-titulo"></strong>: <span id="detalhe-texto"></span>
+            </div>
+        </section>
+
+        <!-- Seção: Quiz Interativo -->
+        <section id="quiz">
+            <h3>Teste seus Conhecimentos</h3>
+            <div class="quiz-container">
+                <p><strong>Pergunta:</strong> Qual deve ser o último recurso utilizado no manejo de pragas segundo a filosofia do MIP?</p>
+                <button class="quiz-btn" data-correto="false">Controle Biológico</button>
+                <button class="quiz-btn" data-correto="false">Controle Cultural</button>
+                <button class="quiz-btn" data-correto="true">Controle Químico (Defensivos)</button>
+                <p id="quiz-resultado"></p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 EcoMIP - Plataforma Educativa sobre Agricultura Sustentável.</p>
+    </footer>
+
+    <!-- Vinculação do arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

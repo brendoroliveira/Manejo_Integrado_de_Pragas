@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #2e7d32;
+    --primary-dark: #1b5e20;
+    --accent: #81c784;
+    --light: #f1f8e9;
+    --dark: #212121;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho e Navegação --- */
+header {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* --- Seção Hero (Banner) --- */
+.hero {
+    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(27, 94, 32, 0.9));
+    color: var(--white);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 60px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* --- Container Principal --- */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+section h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Grid de Pilares --- */
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.pilar-card {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pilar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#pilar-detalhe {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #e8f5e9;
+    border-radius: 4px;
+    display: none; /* Inicia escondido */
+}
+
+/* --- Quiz Interativo --- */
+.quiz-container {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.quiz-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.quiz-btn:hover {
+    background: var(--primary-dark);
+}
+
+#quiz-resultado {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    header { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    nav { 
+        margin-top: 1rem; 
+    }
+    nav a { 
+        margin: 0 0.5rem; 
+    }
+    .hero h2 { 
+        font-size: 1.8rem; 
+    }
+}
